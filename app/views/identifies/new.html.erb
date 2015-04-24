@@ -1,0 +1,13 @@
+<div class="row">
+<div class="col-md-offset-4 col-md-4">
+<%= simple_form_for @doc do |f| %>
+	<%= f.input :series %>
+	<%= f.input :number %>
+	<div class="input-group" >
+		<%= f.input  :where, as: :email, input_html:{class:"form-control",id:"date_pick", rows: 1}%>
+	</div>
+	<%= f.input :country, selected: "RU" %>
+	<%= f.button :submit %>
+<% end %>
+</div>
+</div>

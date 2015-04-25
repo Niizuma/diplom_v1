@@ -4,7 +4,7 @@ class IdentifiesController < ApplicationController
 
   	@doc = Identify.new(doc_params());
     if(@doc.save)
-      redirect_to(:back);
+      redirect_to new_user_path
     else
       respond_to do |format|
         format.html {render 'new'}
@@ -19,6 +19,6 @@ class IdentifiesController < ApplicationController
 
   protected
   def doc_params
-    params.require(:identify).permit(:series,:number, :where, :country);
+    params.require(:identify).permit(:original, :type_id, :unit, :issued_by, :birthday,:series,:number, :where, :country);
   end
 end

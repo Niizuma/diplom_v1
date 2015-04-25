@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#date_pick').datepicker({
+	$('.date_pick').datepicker({
 	    format: "dd/mm/yyyy",
 	    weekStart: 1,
 	    todayBtn: "linked",

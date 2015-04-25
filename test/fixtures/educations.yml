@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  original: false
+  series: MyString
+  number: MyString
+  where: 2015-04-25
+  university: MyString
+
+two:
+  original: false
+  series: MyString
+  number: MyString
+  where: 2015-04-25
+  university: MyString

@@ -11,17 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424191624) do
+ActiveRecord::Schema.define(version: 20150425131848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "identifies", force: :cascade do |t|
+  create_table "educations", force: :cascade do |t|
+    t.boolean  "original"
     t.string   "series"
-    t.integer  "type_id"
     t.string   "number"
     t.date     "where"
+    t.string   "university"
+    t.integer  "etype_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "etypes", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genders", force: :cascade do |t|
+    t.string   "gender_title"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "identifies", force: :cascade do |t|
+    t.boolean  "original"
+    t.integer  "type_id"
     t.string   "country"
+    t.string   "series"
+    t.string   "number"
+    t.string   "unit"
+    t.date     "where"
+    t.string   "issued_by"
+    t.date     "birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +63,17 @@ ActiveRecord::Schema.define(version: 20150424191624) do
     t.string   "type_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "second_name"
+    t.string   "third_name"
+    t.integer  "gender_id"
+    t.string   "special_rights"
+    t.string   "сп_возврата"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

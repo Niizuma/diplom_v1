@@ -2,7 +2,7 @@ class EducationformsController < ApplicationController
 
 def create
   	puts(params)
-
+  
   @doc = Educationform.new(doc_params());
     if(@doc.save)
       redirect_to(:back)
@@ -16,11 +16,12 @@ def create
 
   def new
   	@doc = Educationform.new
+    @doc.build_financingform
   end
 
 protected
   def doc_params
-    params.require(:educationform).permit(:full_time, :correspondence, :part_time);
+    params.require(:educationform).permit(:state, financingform_attributes:[:id, :budget, :paid, :paid_budg ]);
   end
 
 end

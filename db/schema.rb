@@ -17,12 +17,9 @@ ActiveRecord::Schema.define(version: 20150427155407) do
   enable_extension "plpgsql"
 
   create_table "educationforms", force: :cascade do |t|
-    t.boolean  "full_time"
-    t.boolean  "correspondence"
-    t.boolean  "part_time"
-    t.integer  "financingform_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.integer  "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "educations", force: :cascade do |t|
@@ -46,8 +43,9 @@ ActiveRecord::Schema.define(version: 20150427155407) do
     t.boolean  "budget"
     t.boolean  "paid"
     t.boolean  "paid_budg"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "educationform_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "genders", force: :cascade do |t|

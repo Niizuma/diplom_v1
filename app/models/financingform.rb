@@ -1,4 +1,3 @@
 class Financingform < ActiveRecord::Base
-
-	has_one :educationform
+	belongs_to :educationform
 end

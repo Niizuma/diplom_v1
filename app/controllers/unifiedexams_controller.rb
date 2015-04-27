@@ -5,7 +5,7 @@ def create
 
   @document = Unifiedexam.new(document_params());
     if(@document.save)
-      redirect_to(:back)
+      redirect_to new_educationform_path
     else
       respond_to do |format|
         format.html {render 'new'}

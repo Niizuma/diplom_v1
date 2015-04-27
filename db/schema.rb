@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150426144706) do
+ActiveRecord::Schema.define(version: 20150427155407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "educationforms", force: :cascade do |t|
+    t.boolean  "full_time"
+    t.boolean  "correspondence"
+    t.boolean  "part_time"
+    t.integer  "financingform_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "educations", force: :cascade do |t|
     t.boolean  "original"
@@ -29,6 +38,14 @@ ActiveRecord::Schema.define(version: 20150426144706) do
 
   create_table "etypes", force: :cascade do |t|
     t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "financingforms", force: :cascade do |t|
+    t.boolean  "budget"
+    t.boolean  "paid"
+    t.boolean  "paid_budg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

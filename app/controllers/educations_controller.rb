@@ -5,7 +5,7 @@ def create
 
   @doc = Education.new(doc_params());
     if(@doc.save)
-      redirect_to(:back)
+      redirect_to new_unifiedexam_path
     else
       respond_to do |format|
         format.html {render 'new'}

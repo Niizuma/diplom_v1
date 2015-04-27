@@ -1,0 +1,15 @@
+<div class="row">
+<div class="col-md-offset-4 col-md-4">
+<%= simple_form_for @document do |f| %>
+	<%= f.input :original, as: :boolean, checked_value: true, unchecked_value: false %>		
+	<%= f.input :year %>
+	<%= f.input :number %>
+	<%= f.input :russian %>
+	<%= f.input :math %>
+	<%= f.input :social_science %>
+	<%= f.input :physics %>
+		
+	<%= f.button :submit %>
+<% end %>
+</div>
+</div>

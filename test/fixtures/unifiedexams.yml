@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  original: false
+  year: MyString
+  number: MyString
+  russian: MyString
+  math: MyString
+  social_science: MyString
+  physics: MyString
+
+two:
+  original: false
+  year: MyString
+  number: MyString
+  russian: MyString
+  math: MyString
+  social_science: MyString
+  physics: MyString

@@ -4,7 +4,7 @@ class IdentifiesController < ApplicationController
 
   	@doc = Identify.new(doc_params());
     if(@doc.save)
-      redirect_to new_user_path
+      redirect_to new_personaldoc_path
     else
       respond_to do |format|
         format.html {render 'new'}

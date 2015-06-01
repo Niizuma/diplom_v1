@@ -1,5 +1,4 @@
-<div class="row">
-<div class="col-md-offset-4 col-md-4">
+
 <%= simple_form_for @doc do |f| %>
 	<%= f.input :state, collection: Educationform.states.keys%>
 	  <%= f.simple_fields_for :financingform do |p| %>
@@ -9,5 +8,4 @@
     <% end %>
     <%= f.button :submit %>
 <% end %>
-</div>
-</div>
+

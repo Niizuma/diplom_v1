@@ -3,7 +3,8 @@ class IdentifiesController < ApplicationController
   	puts(params)
 
   	@doc = Identify.new(doc_params());
-    if(@doc.save)
+    @doc.user = current_user
+    if(@doc.save!)
       redirect_to new_personaldoc_path
     else
       respond_to do |format|

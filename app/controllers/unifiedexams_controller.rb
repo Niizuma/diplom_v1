@@ -4,7 +4,8 @@ def create
   	puts(params)
 
   @document = Unifiedexam.new(document_params());
-    if(@document.save)
+  @doc.user = current_user
+    if(@document.save!)
       redirect_to new_educationform_path
     else
       respond_to do |format|

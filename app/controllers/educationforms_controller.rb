@@ -4,7 +4,8 @@ def create
   	puts(params)
   
   @doc = Educationform.new(doc_params());
-    if(@doc.save)
+  @doc.user = current_user
+    if(@doc.save!)
       redirect_to(:back)
     else
       respond_to do |format|

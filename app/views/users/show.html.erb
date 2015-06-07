@@ -1,3 +1,9 @@
-
-<%= link_to "Заполнить анкету", new_identify_path, class:"btn btn-primary" %>
-
+<% if current_user.admin? %>
+	<%= render 'showforadmin' %>
+<% else %>
+	<% if current_user.identify_id.nil? %>
+		<%= render 'showforuserwithoutdocs' %>
+	<% else %>
+		<%= render 'showforuser' %>
+	<% end %>	
+<% end %>

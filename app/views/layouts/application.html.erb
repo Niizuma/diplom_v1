@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myapp</title>
+  <title>Приемная комиссия</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,15 +11,11 @@
 <%= render 'layouts/header' %>
 
 <div class="container">
-<div class="row">
-<div class="col-md-offset-4 col-md-4">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
 <%= yield %>
 
-</div>
-</div>
 </div>
 </body>
 </html>

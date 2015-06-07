@@ -29,6 +29,8 @@ gem 'devise'
 
 gem 'rails-erd' # for scheme
 
+gem 'spreadsheet' # for generating xls
+
 gem 'simple_form'
 gem 'country_select'
 

@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   resources :educations, only:[:new, :create]
   resources :unifiedexams, only:[:new, :create]
   resources :educationforms, only:[:new, :create]
-  resources :users, only:[:show]
+  resources :users, only:[:show] do 
+      member do
+          get :generatedocs
+      end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

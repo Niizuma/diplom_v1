@@ -1,0 +1,7 @@
+<% if current_user.admin? %>
+	<list>
+	<%User.all.each do |x| %>
+		<li><%= link_to "#{x.personaldoc.first_name} #{x.personaldoc.second_name} #{x.personaldoc.third_name}",  generatedocs_user_path(x) %></li>
+	<%end%>
+	</list>
+<%end%>

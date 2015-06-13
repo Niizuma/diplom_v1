@@ -1,21 +1,23 @@
 <div class="row">
 <div class="col-md-offset-4 col-md-4">
 <%= simple_form_for @doc do |f| %>
-	<%= f.input :original, as: :boolean, checked_value: true, unchecked_value: false %>
-	<%= f.association :type, collection: Type.all() %>
-	<%= f.input :country, selected: "RU" %>		
-	<%= f.input :series %>
-	<%= f.input :number %>
-	<%= f.input :unit %>
-
+	<%= f.input :original, as: :boolean, checked_value: true, unchecked_value: false , label: "Оригинал" %>
+	<%= f.association :type, collection: Type.all() , label: "Тип документа" %>
+	<%= f.input :country, selected: "RU", label: "Страна" %>		
+	<%= f.input :series, label: "Серия" %>
+	<%= f.input :number, label: "Номер" %>
+	<%= f.input :unit, label: "Подразделение" %>
 	<div class="input-group" >
-		<%= f.input  :where, as: :email, input_html:{class:"form-control date_pick"}%>
+		<%= f.input  :where, as: :email, input_html:{class:"form-control date_pick"} , label: "Когда выдан" %>
 	</div>
-	<%= f.input :issued_by %>
+	<%= f.input :issued_by, label: "Кем выдан" %>
 	<div class="input-group" >
-		<%= f.input  :birthday, as: :email, input_html:{class:"form-control date_pick"}%>
-	</div>	
-	<%= f.button :submit %>
+		<%= f.input  :birthday, as: :email, input_html:{class:"form-control date_pick"}, label: "Дата рождения" %>
+	</div>
+	<%= f.input :birth_place, label: "Место рождения" %>
+	<%= f.input :address, label: "Адрес проживания" %>
+
+	<%= f.button :submit, "Далее" %>
 <% end %>
 </div>
 </div>

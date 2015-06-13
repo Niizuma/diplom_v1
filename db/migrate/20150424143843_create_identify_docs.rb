@@ -10,6 +10,8 @@ class CreateIdentifyDocs < ActiveRecord::Migration
       t.date :where
       t.string :issued_by
       t.date :birthday
+      t.string :birth_place
+      t.string :address
 
       t.timestamps null: false
     end

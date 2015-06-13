@@ -7,6 +7,7 @@ class CreatePersonaldocs < ActiveRecord::Migration
       t.integer :gender_id
       t.string :special_rights
       t.string :сп_возврата
+      t.string :phone_number
 
       t.timestamps null: false
     end

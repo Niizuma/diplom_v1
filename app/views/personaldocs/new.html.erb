@@ -1,13 +1,15 @@
 <div class="row">
 <div class="col-md-offset-4 col-md-4">
 <%= simple_form_for @doc do |f| %>
-	<%= f.input :first_name %>		
-	<%= f.input :second_name %>
-	<%= f.input :third_name %>
-	<%= f.association :gender, collection: Gender.all() %>	
-	<%= f.input :special_rights %>
-	<%= f.input :сп_возврата %>		
-	<%= f.button :submit %>
+	<%= f.input :first_name, label: "Фамилия" %>		
+	<%= f.input :second_name,label: "Имя" %>
+	<%= f.input :third_name, label: "Отчество" %>
+	<%= f.association :gender, collection: Gender.all(), label: "Пол" %>	
+	<%= f.input :special_rights, label: "Специальные права" %>
+	<%= f.input :сп_возврата, label: "Сп. возврата" %>	
+	<%= f.input :phone_number, label: "Контактный телефон" %>
+
+	<%= f.button :submit,  "Далее" %>
 <% end %>
 </div>
 </div>

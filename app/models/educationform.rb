@@ -1,5 +1,5 @@
 class Educationform < ActiveRecord::Base
-    enum state: [:full_time, :correspondence, :part_time]
+    enum state: [:дневное, :заочное, :очно_заочное]
 	has_one :financingform
     accepts_nested_attributes_for :financingform
 

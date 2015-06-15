@@ -4,7 +4,7 @@
 	<list>
 		<h4>Удостоверение личности </h4>
 		<li><b>Оригинал:</b><%= " #{@user.identify.original}" %></li>
-		<li><b>Тип удостоверения личности:</b> <%= " #{@user.identify.type}" %></li>
+		<li><b>Тип удостоверения личности:</b> <%= " #{@user.identify.type.type_title}" %></li>
 		<li><b>Страна:</b><%= " #{@user.identify.country}" %></li>
 		<li><b>Серия:</b><%= " #{@user.identify.series}" %></li>
 		<li><b>Номер:</b><%= " #{@user.identify.number}" %></li>
@@ -21,7 +21,7 @@
 		<li><b>Фамилия:</b><%= " #{@user.personaldoc.first_name}" %></li>
 		<li><b>Имя:</b><%= " #{@user.personaldoc.second_name}" %></li>
 		<li><b>Отчество:</b><%= " #{@user.personaldoc.third_name}" %></li>
-		<li><b>Пол:</b><%= " #{@user.personaldoc.gender}" %></li>
+		<li><b>Пол:</b><%= " #{@user.personaldoc.gender.gender_title}" %></li>
 		<li><b>Специальные права:</b><%= " #{@user.personaldoc.special_rights}" %></li>
 		<li><b>Сп_возврата:</b><%= " #{@user.personaldoc.сп_возврата}" %></li>
 	</list>
@@ -33,7 +33,7 @@
 		<li><b>Номер:</b><%= " #{@user.education.number}" %></li>
 		<li><b>Когда:</b><%= " #{@user.education.where}" %></li>
 		<li><b>ВУЗ:</b><%= " #{@user.education.university}" %></li>
-		<li><b>Тип образовательного документа:</b><%= " #{@user.education.etype}" %></li>
+		<li><b>Тип образовательного документа:</b><%= " #{@user.education.etype.title}" %></li>
 	</list>
 	<br>
 	<list>
@@ -48,16 +48,15 @@
 	</list>
 	<br>
 	<list>
-		<h1>Форма обучения и финансирования</h1>
-		<li><b>Форма обучения:</b><%= " #{@user.educationform}" %></li>
-		<li><b>Форма финансирования:</b><%= " #{@user.financingform}" %></li>
+		<h4>Форма обучения и финансирования</h4>
+		<li><b>Форма обучения:</b><%= " #{@user.educationform.state}" %></li>
 	</list>
 	<br>
 	<list>
-		<h1>Приоритет специальностей</h1>
-		<li><b>1:</b><%= " #{@user.specialization}" %></li>
-		<li><b>2:</b><%= " #{@user.specialization}" %></li>
-		<li><b>3:</b><%= " #{@user.specialization}" %></li>
+		<h4>Приоритет специальностей</h4>
+		<li><b>1:</b><%= " #{@user.priority.first}" %></li>
+		<li><b>2:</b><%= " #{@user.priority.second}" %></li>
+		<li><b>3:</b><%= " #{@user.priority.third}" %></li>
 	</list>
 <%end%>
 </div>

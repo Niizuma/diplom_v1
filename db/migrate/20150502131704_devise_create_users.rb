@@ -11,7 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :education_id
       t.integer :unifiedexam_id
       t.integer :educationform_id
-      t.integer :specialization_id
+      t.integer :priority_id
 
       ## Recoverable
       t.string   :reset_password_token

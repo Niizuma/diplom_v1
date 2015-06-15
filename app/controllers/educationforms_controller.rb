@@ -3,8 +3,8 @@ class EducationformsController < ApplicationController
 def create
   	puts(params)
   
-  @doc = Educationform.new(doc_params());
-  @doc.user = current_user
+  @doc = current_user.build_educationform(doc_params());
+
     if(@doc.save!)
       redirect_to new_educationform_path 
     else
@@ -16,7 +16,7 @@ def create
   end
 
   def new
-  	@doc = Educationform.new
+  	@doc = current_user.build_educationform
     @doc.build_financingform
   end
 

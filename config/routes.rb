@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :educations, only:[:new, :create]
   resources :unifiedexams, only:[:new, :create]
   resources :educationforms, only:[:new, :create]
+  resources :priorities, only:[:new, :create]
   resources :users, only:[:show] do 
       member do
           get :generatedocs

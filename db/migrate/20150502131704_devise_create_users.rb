@@ -4,11 +4,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      
+      ## Relations
       t.integer :identify_id
       t.integer :personaldoc_id
       t.integer :education_id
       t.integer :unifiedexam_id
       t.integer :educationform_id
+      t.integer :specialization_id
 
       ## Recoverable
       t.string   :reset_password_token

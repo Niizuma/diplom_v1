@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # get 'persons/profile'
 
   resources :identifies, only:[:new, :create]
+  resources :specializations, only:[:new, :create]
   resources :personaldocs, only:[:new, :create]
   resources :educations, only:[:new, :create]
   resources :unifiedexams, only:[:new, :create]

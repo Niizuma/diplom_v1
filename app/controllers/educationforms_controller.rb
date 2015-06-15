@@ -6,7 +6,7 @@ def create
   @doc = Educationform.new(doc_params());
   @doc.user = current_user
     if(@doc.save!)
-      redirect_to user_path 
+      redirect_to new_educationform_path 
     else
       respond_to do |format|
         format.html {render 'new'}

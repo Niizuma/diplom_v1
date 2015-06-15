@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20150602102246) do
     t.integer  "education_id"
     t.integer  "unifiedexam_id"
     t.integer  "educationform_id"
+    t.integer  "specialization_id"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
